@@ -38,6 +38,7 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/') {
     //cookies().set('cookieValue', 'valor inicial');
     response.cookies.set('cookieValue', 'valor-inicial');
+    applySetCookie(request, response);
   }
 
   if (request.nextUrl.pathname === '/trocar') {
